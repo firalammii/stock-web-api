@@ -1,0 +1,20 @@
+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
+
+
+
+Heroku rotates credentials periodically and updates applications where this database is attached.
+
+Host
+ec2-54-145-139-208.compute-1.amazonaws.com
+Database
+daere9paja1s7c
+User
+vpkwujgpruwpxj
+Port
+5432
+Password
+e959ec92afc029e5ec74a63795a7225bbdda5e0819d16d1c20d2c1bdccc13c0d
+URI
+postgres://vpkwujgpruwpxj:e959ec92afc029e5ec74a63795a7225bbdda5e0819d16d1c20d2c1bdccc13c0d@ec2-54-145-139-208.compute-1.amazonaws.com:5432/daere9paja1s7c
+Heroku CLI
+heroku pg:psql postgresql-graceful-31813 --app stock-api-actse
