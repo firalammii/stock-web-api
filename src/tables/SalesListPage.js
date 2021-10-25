@@ -46,7 +46,6 @@ const MaterialListPage = () =>{
                         <TableRow>
 
                             <TableCell><b>sales Id</b> </TableCell>
-
                             <TableCell><b>Seller Name</b> </TableCell>
                             <TableCell><b>Buyer Name</b> </TableCell>
                             <TableCell><b>Buyer tel</b> </TableCell>
