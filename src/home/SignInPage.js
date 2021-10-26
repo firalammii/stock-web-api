@@ -50,21 +50,23 @@ const SignInPage = ()=>{
     }
 
     function handleLogin (res){
+        
+        const resArray = res.split(" ");
 
-        if(res === "admin"){
-            alert("successfully logged in as: "+res)
+        if(resArray[0] === "admin"){
+            alert("WELCOME BACK " + resArray[1]+" "+resArray[2]+"!!\nsuccessfully logged in as: "+resArray[0])
             history.push("/admin/work")
         }
-        else if(res === "purchaser"){
-            alert("successfully logged in as: "+res)
+        else if(resArray[0] === "purchaser"){
+            alert("WELCOME BACK " + resArray[1]+" "+resArray[2]+"!!\nsuccessfully logged in as: "+resArray[0])
             history.push("/purchaser/material/add")
 
         }
-        else if(res === "sales"){
-            alert("successfully logged in as: "+res)
+        else if(resArray[0] === "sales"){
+            alert("WELCOME BACK " + resArray[1]+" "+resArray[2]+"!!\nsuccessfully logged in as: "+resArray[0])
             history.push("/sales/add")
         }
-        else if(res === "authorization"){
+        else if(resArray[0] === "authorization"){
             alert("you are not AUTHORIZED TO LOGIN!!")
         }
         else{

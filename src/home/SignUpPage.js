@@ -43,7 +43,10 @@ const SignUpPage = ()=>{
             companyId:data.companyId,
             password:data.password,
         }).then(res=>{
-            alert("successfully registered as: "+ res.data+"\n go and sign in now as: "+res.data)
+            const resArray = res.data.split(" ");
+            alert("WELCOME "+resArray[1]+" "+ resArray[2]+
+                "!!\nsuccessfully registered as: "+ resArray[0]+
+                "\n you can sign in now as: "+resArray[0]);
             history.push("/authorizedEmployee/login")
         }).catch(err=>{
             alert(err)
