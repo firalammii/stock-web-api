@@ -1,9 +1,10 @@
-import {Button, makeStyles, TextField} from "@material-ui/core";
+import {Box, Button, CircularProgress, makeStyles, TextField} from "@material-ui/core";
 import React, {useState} from "react";
 import {Form} from "reactstrap";
 import {useHistory} from "react-router-dom";
 import HeaderCommon from "../pageBars/HeaderCommon";
 import Axios from "axios";
+import useAxios from "axios-hooks";
 
 const useStyles = makeStyles(()=>({
     TextField : {
@@ -48,7 +49,9 @@ const SignInPage = ()=>{
                 "\n or You are not an authorized user")
         })
     }
+
     function handleLogin (res){
+
         if(res === "admin"){
             alert("successfully logged in as: "+res)
             history.push("/admin/work")
