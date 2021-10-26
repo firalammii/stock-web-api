@@ -1,92 +1,50 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
 import {useHistory} from "react-router-dom";
-import SearchIcon from '@mui/icons-material/Search';
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import Button from "@material-ui/core/Button";
 import CustomersMaterialListPage from "../tables/usersPages/CustomersMaterialListPage";
+import {makeStyles} from "@material-ui/core";
 
-const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+const useStyles = makeStyles((theme)=>({
+    root: {
+        flexGrow: 1,
     },
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
-        width: 'auto',
+
+    menuButton: {
+        marginRight: theme.spacing(2),
     },
-}));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            width: '12ch',
-            '&:focus': {
-                width: '20ch',
-            },
-        },
+    title: {
+        flexGrow: 1,
     },
-}));
 
+}));
 const HomePageWithSearch = () =>{
+    const classes = useStyles();
     const history = useHistory()
     return (
         <>
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 0 }}>
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton
+                            className={classes.menuButton}
                             size="large"
                             edge="start"
                             color="inherit"
-                            aria-label="open drawer"
+                            aria-label="menu"
                             sx={{ mr: 2 }}
                         >
-                            <LocalGroceryStoreIcon/>
+                            <LocalGroceryStoreIcon />
                         </IconButton>
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="div"
-                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                        >
-                            Stock Management System
+                        <Typography variant="h6" className={classes.title} component="div" sx={{ flexGrow: 1 }}>
+                            Stack Management System
                         </Typography>
-                        <Search>
-                            <SearchIconWrapper>
-                                <SearchIcon />
-                            </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Search…"
-                                inputProps={{ 'aria-label': 'search' }}
-                            />
-                        </Search>{"        "}
 
                         <Button color="inherit" onClick={()=> {
                             history.push("/authorizedEmployee/signup");
@@ -99,7 +57,6 @@ const HomePageWithSearch = () =>{
                         }}>
                             sign in
                         </Button>{ }
-
                     </Toolbar>
                 </AppBar>
             </Box>

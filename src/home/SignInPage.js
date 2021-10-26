@@ -1,10 +1,9 @@
-import {Box, Button, CircularProgress, makeStyles, TextField} from "@material-ui/core";
+import {Box, Button, makeStyles, TextField} from "@material-ui/core";
 import React, {useState} from "react";
 import {Form} from "reactstrap";
 import {useHistory} from "react-router-dom";
 import HeaderCommon from "../pageBars/HeaderCommon";
 import Axios from "axios";
-import useAxios from "axios-hooks";
 
 const useStyles = makeStyles(()=>({
     TextField : {
@@ -45,7 +44,7 @@ const SignInPage = ()=>{
         }).then(res=>{
             handleLogin(res.data)
         }).catch(err=>{
-            alert(err+"\nEither your password or your user id is incorrect"+
+            alert("\nEither your password or your user id is incorrect"+
                 "\n or You are not an authorized user")
         })
     }
