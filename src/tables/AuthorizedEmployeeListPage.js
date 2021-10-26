@@ -21,7 +21,7 @@ const AuthorizedEmployeeListPage = () =>{
 
     const classes = useStyles();
 
-    const [{data, loading, error}] = useAxios("https://stock-api-actse.herokuapp.com/authorizedEmployee/list")
+    const [{data, loading, error}] = useAxios("https://stock-mgt-sys-api.herokuapp.com/authorizedEmployee/list")
     if(loading){
         return(
             <Box sx={{display:'flex'}}>
@@ -81,14 +81,3 @@ const AuthorizedEmployeeListPage = () =>{
 
 }
 export default AuthorizedEmployeeListPage
-
-{
-    // <TableRow key={row.id}>
-    //     <TableCell component="th" scope="row">
-    //          <Link to={'/show/${row.id}'}> {row.id} </Link>
-    //      </TableCell>
-    //      <TableCell></TableCell>
-    //       <TableCell></TableCell>
-    //     <TableCell>{convertPasswordToStars(row.password)}</TableCell>
-    // </TableRow>
-}

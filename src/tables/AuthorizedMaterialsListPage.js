@@ -26,7 +26,7 @@ const useStyles = makeStyles(()=>({
 const CustomersMaterialListPage = () =>{
 
     const classes=useStyles()
-    const [{data, loading, error}] = useAxios("https://stock-api-actse.herokuapp.com/material/list")
+    const [{data, loading, error}] = useAxios("https://stock-mgt-sys-api.herokuapp.com/material/list")
     if(loading){
         return(
             <Box sx={{display:'flex'}}>

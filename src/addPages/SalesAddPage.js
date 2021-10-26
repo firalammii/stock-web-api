@@ -37,7 +37,7 @@ const SalesAddPage = ()=>{
 
     const classes = useStyles();
     const history = useHistory();
-    const customerAddUrl = "https://stock-api-actse.herokuapp.com/customer/add";
+    const customerAddUrl = "https://stock-mgt-sys-api.herokuapp.com/customer/add";
 
     const [customerData, setCustomerData] = useState({
         firstName: "", middleName: "",
@@ -66,7 +66,7 @@ const SalesAddPage = ()=>{
         })
     }
 
-    const salesAddUrl = "https://stock-api-actse.herokuapp.com/sales/add";
+    const salesAddUrl = "https://stock-mgt-sys-api.herokuapp.com/sales/add";
 
     const[salesData, setSalesData] = useState({
         customerId:"",itemId:"",quantity:"",price:""

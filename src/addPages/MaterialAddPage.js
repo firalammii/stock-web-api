@@ -33,7 +33,7 @@ const useStyles = makeStyles(()=>({
 const MaterialAddPage = ()=>{
 
     const classes = useStyles();
-    const url = "https://stock-api-actse.herokuapp.com/material/add"
+    const url = "https://stock-mgt-sys-api.herokuapp.com/material/add"
 
     const[data, setData] = useState({
 

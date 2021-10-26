@@ -9,7 +9,6 @@ import {
     CircularProgress, makeStyles
 } from "@material-ui/core";
 import useAxios from "axios-hooks";
-import HeaderInPurchaserPage from "../pageBars/HeaderInPurchaserPage";
 import HeaderInAdminNSalesPage from "../pageBars/HeaderInAdminNSalesPage";
 
 const useStyles = makeStyles(()=>({
@@ -23,7 +22,7 @@ const EmployeeListPage = () =>{
 
     const classes = useStyles();
 
-    const [{data, loading, error}] = useAxios("https://stock-api-actse.herokuapp.com/employee/list")
+    const [{data, loading, error}] = useAxios("https://stock-mgt-sys-api.herokuapp.com/employee/list")
     if(loading){
         return(
             <Box sx={{display:'flex'}}>

@@ -19,7 +19,7 @@ const useStyles = makeStyles(()=>({
 }));
 
 const SignUpPage = ()=>{
-    const url = "https://stock-api-actse.herokuapp.com/authorizedEmployee/signup";
+    const url = "https://stock-mgt-sys-api.herokuapp.com/authorizedEmployee/signup";
 
     const classes = useStyles();
 

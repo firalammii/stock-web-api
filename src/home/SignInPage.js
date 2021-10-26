@@ -1,4 +1,4 @@
-import {Box, Button, makeStyles, TextField} from "@material-ui/core";
+import { Button, makeStyles, TextField} from "@material-ui/core";
 import React, {useState} from "react";
 import {Form} from "reactstrap";
 import {useHistory} from "react-router-dom";
@@ -20,7 +20,7 @@ const useStyles = makeStyles(()=>({
 }));
 
 const SignInPage = ()=>{
-    const url = "https://stock-api-actse.herokuapp.com/authorizedEmployee/login";
+    const url = "https://stock-mgt-sys-api.herokuapp.com/authorizedEmployee/login";
 
     const history =useHistory();
     const classes = useStyles();
@@ -44,7 +44,7 @@ const SignInPage = ()=>{
         }).then(res=>{
             handleLogin(res.data)
         }).catch(err=>{
-            alert("\nEither your password or your user id is incorrect"+
+            alert(err + "\nEither your password or your user id is incorrect" +
                 "\n or You are not an authorized user")
         })
     }

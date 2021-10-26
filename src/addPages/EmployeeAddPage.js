@@ -22,7 +22,7 @@ const useStyles = makeStyles(()=>({
 const EmployeeAddPage = ()=>{
 
     const classes = useStyles();
-    const url = "https://stock-api-actse.herokuapp.com/employee/add"
+    const url = "https://stock-mgt-sys-api.herokuapp.com/employee/add"
 
     const[data, setData] = useState({
 
