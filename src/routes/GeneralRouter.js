@@ -37,9 +37,6 @@ const GeneralRouter = () => {
 
                 <Route exact path = "/sales/add" component = {SalesAddPage}/>
 
-
-
-
                 <Route exact path ="/employee/list/{id}" component = {EmployeeListPage}/>
                 <Route exact path ="/material/list/{itemTagNum}" component = {MaterialListPage}/>
                 <Route exact path ="/customer/list/{phoneNumber}" component = {CustomerListPage}/>
