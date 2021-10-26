@@ -22,7 +22,7 @@ const AdminWorkRouter =()=> {
                 <h4> <a href={"/employee/list"}> list all employee details </a> </h4>
 
                 <hr/>
-                <h4> <a href={"/admin/material/add"}>  add materials  </a> </h4>
+                <h4> <a href={"/material/add"}>  add materials  </a> </h4>
                 <h4> <a href={"/material/list"}>  list all materials in the store </a> </h4>
 
                 <hr/>
@@ -31,7 +31,7 @@ const AdminWorkRouter =()=> {
                 <hr/>
 
                 <h4> <a href={"/authorizedEmployee/list"}>  list all Authorized Employees </a> </h4>
-                <h4> <a href={"/users/material/list"}>  users view material list </a> </h4>
+                <h4> <a href={"/customerView/material/list"}>  customer's view material list </a> </h4>
                 <hr/>
             </div>
         </>

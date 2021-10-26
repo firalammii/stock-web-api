@@ -4,6 +4,7 @@ import {Form} from "reactstrap";
 import { makeStyles } from '@material-ui/core'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from "axios";
+import HeaderInAdminNSalesPage from "../pageBars/HeaderInAdminNSalesPage";
 
 const useStyles = makeStyles(()=>({
     TextField : {
@@ -67,6 +68,8 @@ const MaterialAddPage = ()=>{
         })
     }
     return(
+        <>
+            <HeaderInAdminNSalesPage/>
         <div className={classes.boxBorder}>
             <Form>
                 <TextField
@@ -183,6 +186,7 @@ const MaterialAddPage = ()=>{
 
             </Form>
         </div>
+            </>
     )
 }
 

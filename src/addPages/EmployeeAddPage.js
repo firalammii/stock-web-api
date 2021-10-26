@@ -3,7 +3,6 @@ import { TextField, Button} from '@material-ui/core'
 import {Form} from "reactstrap";
 import { makeStyles } from '@material-ui/core'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HeaderCommon from "../pageBars/HeaderCommon";
 import Axios from "axios";
 import HeaderInAdminNSalesPage from "../pageBars/HeaderInAdminNSalesPage";
 
@@ -20,8 +19,6 @@ const useStyles = makeStyles(()=>({
     },
 }));
 
-
-
 const EmployeeAddPage = ()=>{
 
     const classes = useStyles();
@@ -36,7 +33,7 @@ const EmployeeAddPage = ()=>{
     })
     function handleFields(e){
         const newData = {...data}
-        newData[e.target.id] =e.target.value;
+        newData[e.target.id] = e.target.value;
         setData(newData);
     }
 

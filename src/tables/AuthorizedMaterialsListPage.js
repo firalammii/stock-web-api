@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import useAxios from "axios-hooks";
 import HeaderInAdminNSalesPage from "../pageBars/HeaderInAdminNSalesPage";
-import HeaderInPurchaserPage from "../pageBars/HeaderInPurchaserPage";
 
 const useStyles = makeStyles(()=>({
     TextField : {
@@ -53,14 +52,13 @@ const CustomersMaterialListPage = () =>{
                         <TableRow>
 
                             <TableCell><b>Item Id</b> </TableCell>
-                            <TableCell><b>Tag Num</b> </TableCell>
                             <TableCell><b>Category</b> </TableCell>
                             <TableCell><b>Product Country</b> </TableCell>
                             <TableCell><b>Product Company</b> </TableCell>
                             <TableCell><b>Product Name</b> </TableCell>
                             <TableCell><b>Number in Store</b> </TableCell>
                             <TableCell><b>Standard</b> </TableCell>
-
+                            <TableCell><b>Cost</b> </TableCell>
                             <TableCell><b>Price pp</b> </TableCell>
 
                         </TableRow>
@@ -71,14 +69,13 @@ const CustomersMaterialListPage = () =>{
                             return (
                                 <TableRow>
                                     <TableCell>{row.id}</TableCell>
-                                    <TableCell>{row.itemTagNum}</TableCell>
                                     <TableCell>{row.category}</TableCell>
                                     <TableCell>{row.productCountry}</TableCell>
                                     <TableCell>{row.productCompany}</TableCell>
                                     <TableCell>{row.itemName}</TableCell>
                                     <TableCell>{row.noOfItem}</TableCell>
                                     <TableCell>{row.standard}</TableCell>
-
+                                    <TableCell>{row.cost}</TableCell>
                                     <TableCell>{row.minSellingPrice}</TableCell>
                                 </TableRow>
                             )

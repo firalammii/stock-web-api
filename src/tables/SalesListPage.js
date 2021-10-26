@@ -9,9 +9,7 @@ import {
     CircularProgress, makeStyles
 } from "@material-ui/core";
 import useAxios from "axios-hooks";
-import HeaderCommon from "../pageBars/HeaderCommon";
 import HeaderInAdminNSalesPage from "../pageBars/HeaderInAdminNSalesPage";
-import HeaderInPurchaserPage from "../pageBars/HeaderInPurchaserPage";
 
 const useStyles = makeStyles(()=>({
     boxBorder :{

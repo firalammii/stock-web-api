@@ -9,7 +9,6 @@ import {
     CircularProgress, makeStyles
 } from "@material-ui/core";
 import useAxios from "axios-hooks";
-import HeaderInPurchaserPage from "../pageBars/HeaderInPurchaserPage";
 import HeaderInAdminNSalesPage from "../pageBars/HeaderInAdminNSalesPage";
 const useStyles = makeStyles(()=>({
     tableBorder :{
@@ -40,7 +39,7 @@ const AuthorizedEmployeeListPage = () =>{
 
     return (
         <>
-            <HeaderInPurchaserPage/>
+            <HeaderInAdminNSalesPage/>
 
             <TableContainer>
                 <Table className={classes.tableBorder}>

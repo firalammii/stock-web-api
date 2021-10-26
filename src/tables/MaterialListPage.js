@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import useAxios from "axios-hooks";
 import HeaderCommon from "../pageBars/HeaderCommon";
-import HeaderInAdminNSalesPage from "../pageBars/HeaderInAdminNSalesPage";
 
 const useStyles = makeStyles(()=>({
     boxBorder :{

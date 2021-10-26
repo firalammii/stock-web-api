@@ -1,14 +1,7 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+import CustomerViewMaterialList from "../tables/CustomerViewMaterialList";
+import {AppBar, Box, Button, IconButton, makeStyles, Toolbar, Typography} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
-import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
-import Button from "@material-ui/core/Button";
-import CustomersMaterialListPage from "../tables/usersPages/CustomersMaterialListPage";
-import {makeStyles} from "@material-ui/core";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const useStyles = makeStyles((theme)=>({
     root: {
@@ -28,7 +21,7 @@ const HomePageWithSearch = () =>{
     const classes = useStyles();
     const history = useHistory()
     return (
-        <>
+        <div>
             <Box sx={{ flexGrow: 0 }}>
                 <AppBar position="static">
                     <Toolbar>
@@ -40,7 +33,8 @@ const HomePageWithSearch = () =>{
                             aria-label="menu"
                             sx={{ mr: 2 }}
                         >
-                            <LocalGroceryStoreIcon />
+                            <AddShoppingCartIcon/>
+
                         </IconButton>
                         <Typography variant="h6" className={classes.title} component="div" sx={{ flexGrow: 1 }}>
                             Stack Management System
@@ -60,9 +54,11 @@ const HomePageWithSearch = () =>{
                     </Toolbar>
                 </AppBar>
             </Box>
-            <CustomersMaterialListPage/>
-        </>
-    );
+
+            <CustomerViewMaterialList/>
+
+        </div>
+    )
 }
 
 export default HomePageWithSearch
