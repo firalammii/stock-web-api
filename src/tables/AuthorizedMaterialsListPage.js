@@ -60,6 +60,7 @@ const CustomersMaterialListPage = () =>{
                             <TableCell><b>Standard</b> </TableCell>
                             <TableCell><b>Cost</b> </TableCell>
                             <TableCell><b>Price pp</b> </TableCell>
+                            <TableCell><b>Purchaser</b> </TableCell>
 
                         </TableRow>
                     </TableHead>
@@ -77,6 +78,7 @@ const CustomersMaterialListPage = () =>{
                                     <TableCell>{row.standard}</TableCell>
                                     <TableCell>{row.cost}</TableCell>
                                     <TableCell>{row.minSellingPrice}</TableCell>
+                                    <TableCell>{row.purchaser}</TableCell>
                                 </TableRow>
                             )
                         })}
